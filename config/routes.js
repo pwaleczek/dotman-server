@@ -7,11 +7,11 @@ function routes(app, lib) {
   var controllers = lib.controllers
     , api = lib.api
 
-  require('./routes/auth')(lib)
+  // require('./routes/auth')(lib)
 
-  app.all('/api/*', require('express').basicAuth(api.basicAuth), api.next)
+  // app.all('/api/*', require('express').basicAuth(api.basicAuth), api.next)
 
-  require('./routes/api')(lib)
+  // require('./routes/api')(lib)
 
   app.get('/', controllers.home)
 }

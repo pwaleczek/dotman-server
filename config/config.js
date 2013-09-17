@@ -59,7 +59,7 @@ var config = {
           , dbname: 'dotman'
           , port: '27017'
         }
-      , favicon: path.join(defaults.distDir, 'favicon.ico')
+      , favicon: path.join(main.distDir, 'favicon.ico')
       , errorHandler: {
             dumpExceptions: false
           , showStack: true
@@ -71,7 +71,7 @@ var config = {
 module.exports = setup
 
 function setup() {
-  config = _.extend(defaults, config[env])
+  config = _.extend(main, config[env])
   config.env = env
   config.url = 'http://' + config.host + ':' + config.port
   return config

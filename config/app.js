@@ -20,7 +20,7 @@ function configure() {
   // set view helper for config
   var config = lib.config
   app.locals.config = config
-  app.locals.moment = require('moment')
+  // app.locals.moment = require('moment')
 
   app.set('views', config.viewsDir)
   app.set('view engine', 'jade')
